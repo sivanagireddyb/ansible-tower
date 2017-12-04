@@ -5,8 +5,8 @@
     yum: name=epel-release state=present
 
   - name: install httpd
-    yum: name=httpd state=present update_cache=yes
+    yum: name=ntp state=present update_cache=yes
 
   - name: start httpd
-    service: name=httpd state=started enabled=yes
+    service: name=ntpd state=started enabled=yes
 
