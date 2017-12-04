@@ -1,12 +1,12 @@
 ---
-- hosts:
+- hosts: testservers
   tasks:
   - name: install epel repository && update system
     yum: name=epel-release state=present
 
-  - name: install httpd
+  - name: install ntp
     yum: name=ntp state=present update_cache=yes
 
-  - name: start httpd
+  - name: start ntp
     service: name=ntpd state=started enabled=yes
 
